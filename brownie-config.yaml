@@ -1,0 +1,14 @@
+# exclude SafeMath when calculating test coverage
+# https://eth-brownie.readthedocs.io/en/v1.10.3/config.html#exclude_paths
+networks:
+    default: development
+    development:
+        cmd_settings: 
+            default_balance : 10000
+    mainnet-fork:
+      cmd_settings:
+        accounts : 50
+        default_balance : 10000
+reports:
+  exclude_contracts:
+    - SafeMath
